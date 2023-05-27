@@ -1,0 +1,13 @@
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\bin\Release\WpfControlLibrary3D.dll
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\bin\Release\WpfControlLibrary3D.pdb
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\MainControl.g.cs
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D_MarkupCompile.cache
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D_MarkupCompile.lref
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\MainControl.baml
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.g.resources
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.Properties.Resources.resources
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.csproj.GenerateResource.cache
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.dll
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.pdb
+C:\Users\Administrator\Documents\program\MicroNano3DPrinter\WpfControlLibrary3D\obj\Release\WpfControlLibrary3D.csproj.AssemblyReference.cache

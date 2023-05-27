@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="WpfControlLibrary3D.MainControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfControlLibrary3D"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="800">
+    <Grid x:Name="mainGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="200"/>
+        </Grid.ColumnDefinitions>
+        <Viewport3D x:Name="main3D" ClipToBounds="False" IsHitTestVisible="False">
+            <Viewport3D.Camera>
+                <PerspectiveCamera x:Name="cameraPer" Position="300,200,100" LookDirection="-300,-200,-100" UpDirection="0,0,1">
+                    <PerspectiveCamera.Transform>
+                        <Transform3DGroup>
+                            <ScaleTransform3D ScaleX="1" ScaleY="1" ScaleZ="1"/>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Axis="1,0,0" Angle="{Binding ElementName=sliX, Path=Value}"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Axis="0,1,0" Angle="{Binding ElementName=sliY, Path=Value}"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                            <RotateTransform3D>
+                                <RotateTransform3D.Rotation>
+                                    <AxisAngleRotation3D Axis="0,0,1" Angle="{Binding ElementName=sliZ, Path=Value}"/>
+                                </RotateTransform3D.Rotation>
+                            </RotateTransform3D>
+                        </Transform3DGroup>
+                    </PerspectiveCamera.Transform>
+                </PerspectiveCamera>
+            </Viewport3D.Camera>
+            <ModelVisual3D>
+                <ModelVisual3D.Content>
+                    <Model3DGroup x:Name="modelGroup">
+                        <AmbientLight Color="White"/>
+                        <GeometryModel3D x:Name="head">
+                            <GeometryModel3D.Geometry>
+                                <MeshGeometry3D Positions="-5,-5,-20 5,-5,-20, 5,5,-20 -5,5,-20 0,0,0" TriangleIndices="0,1,2 2,3,0 0,1,4 1,2,4 2,3,4 3,0,4"/>
+                            </GeometryModel3D.Geometry>
+                            <GeometryModel3D.Transform>
+                                <TranslateTransform3D OffsetX="-1" OffsetY="-1" OffsetZ="-1">
+                                    
+                                </TranslateTransform3D>
+                            </GeometryModel3D.Transform>
+                            <GeometryModel3D.Material>
+                                <DiffuseMaterial Brush="#f6416c"/>
+                            </GeometryModel3D.Material>
+                            <GeometryModel3D.BackMaterial>
+                                <DiffuseMaterial Brush="#ffde7d"/>
+                            </GeometryModel3D.BackMaterial>
+                        </GeometryModel3D>
+                    </Model3DGroup>
+                </ModelVisual3D.Content>
+            </ModelVisual3D>
+        </Viewport3D>
+        <StackPanel Grid.Column="1">
+            <Label Content="移动相机："/>
+            <Slider x:Name="viewX" Maximum="1000" Minimum="-1000" Value="300" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Slider x:Name="viewY" Maximum="1000" Minimum="-1000" Value="200" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Slider x:Name="viewZ" Maximum="1000" Minimum="-1000" Value="100" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Label Content="旋转模型："/>
+            <Slider x:Name="sliX" Maximum="360" Minimum="-360" Value="180" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Slider x:Name="sliY" Maximum="360" Minimum="-360" Value="0" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Slider x:Name="sliZ" Maximum="360" Minimum="-360" Value="90" SmallChange="1" SnapsToDevicePixels="True"/>
+            <Button x:Name="btnReset" Content="加载预设角度" Click="btnReset_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
